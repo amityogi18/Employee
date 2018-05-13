@@ -1,0 +1,30 @@
+<input type="text" [(ngModel)]='searchName' placeholder="Search By Name"/>
+<select [(ngModel)] ='fieldName' placeholder = 'Select'>
+  <option value = 'sno'>S.No</option>
+  <option value = 'name'>Name</option>
+  <option value = 'phone_number'>Phone_Number</option>
+  <option value = 'city'>City</option>
+  <option value = 'address.address_1'>Address_1</option>
+  <option value = 'address.address_2'>Address_2</option>
+</select>
+<table style="width:100%">
+  <tr>
+    <th>S.No</th>
+    <th>Name</th> 
+    <th>Phone_Number</th>
+    <th>City</th>
+    <th>Address_1</th>
+    <th>Address_2</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor = "let employee of employeeList | searchPipeFilter : searchName | sortByField : fieldName">
+    <td>{{employee.sno}}</td>
+    <td>{{employee.name}}</td>
+    <td *ngIf='isNotNumber(employee.phone_number)'>NA</td>
+    <td *ngIf='!isNotNumber(employee.phone_number)'>{{employee.phone_number}}</td>
+    <td>{{employee.city}}</td>
+    <td>{{employee.address.address_1}}</td>
+    <td>{{employee.address.address_2}}</td>
+    <td><a routerLink='/edit'>Edit</a></td>
+  </tr>
+</table>

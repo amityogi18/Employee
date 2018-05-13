@@ -1,0 +1,40 @@
+{
+    "data": [
+        {   
+            "sno": 1,
+            "name" : "Jacob",
+            "phone_number" : 9996325874 ,
+            "city" : "Pune",
+            "address" : 
+                {
+                    "address_1" : "Keshav Nagar",
+                    "address_2" : "Florida River Bank"
+                }
+                
+        },
+        {   
+            "sno": 2,
+            "name" : "Jacob Singh",
+            "phone_number" : "AETPTY1090D",
+            "city" : "Indore",
+            "address" : 
+                {
+                    "address_1" : "Vijay Nagar",
+                    "address_2" : "Florida State"
+                }
+             
+        },
+        {   
+            "sno": 3,
+            "name" : "Jacob",
+            "phone_number" : 9996325874,
+            "city" : "Pune",
+            "address" : 
+                {
+                    "address_1" : "Krishna Nagar",
+                    "address_2" : "Manjari River Bank"
+                }
+                
+        }
+    ]
+}
