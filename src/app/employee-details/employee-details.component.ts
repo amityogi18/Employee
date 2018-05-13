@@ -22,14 +22,7 @@ export class EmployeeDetailsComponent implements OnInit {
   }
 
   isNotNumber(param) {
-    debugger;
-    if(_.isString(param)) {
-      return 1;
-    }
-    else {
-      return 0;
-    }
-
+    return _.isString(param)
   }
 
   showEmployeeData() {
